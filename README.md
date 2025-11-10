@@ -1,5 +1,5 @@
 
-View via vercel ( calculator-mw1b2ch40-paradise-georges-projects.vercel.app)
+View via vercel [( calculator-mw1b2ch40-paradise-georges-projects.vercel.app)](https://calculator-mw1b2ch40-paradise-georges-projects.vercel.app/)
 
 
 # 🧮 Calculator Program
