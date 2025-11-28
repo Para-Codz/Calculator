@@ -1,4 +1,13 @@
-* {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickCalc</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <style>
+        * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -160,7 +169,74 @@ box-shadow: 0 0 25px rgba(255, 23, 68, 0.8);
         height: 2.5rem;
         font-size: 1.4rem;
     }
-    body {
+    /* body {
         padding: 5px;
-    }
+    } */
 }
+
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <input id="display" readonly>
+
+        <div id="keys">
+            <button onclick="buttonEachNumber('+')" class="operator-btn">+</button>
+            <button onclick="buttonEachNumber('7')">7</button>
+            <button onclick="buttonEachNumber('8')">8</button>
+            <button onclick="buttonEachNumber('9')">9</button>
+            <button onclick="buttonEachNumber('-')" class="operator-btn">-</button>
+            <button onclick="buttonEachNumber('4')">4</button>
+            <button onclick="buttonEachNumber('5')">5</button>
+            <button onclick="buttonEachNumber('6')">6</button>
+            <button onclick="buttonEachNumber('*')" class="operator-btn">x</button>
+            <button onclick="buttonEachNumber('1')">1</button>
+            <button onclick="buttonEachNumber('2')">2</button>
+            <button onclick="buttonEachNumber('3')">3</button>
+            <button onclick="buttonEachNumber('/')" class="operator-btn">/</button>
+            <button onclick="buttonEachNumber('0')">0</button>
+            <button onclick="buttonEachNumber('.')">.</button>
+
+            <button onclick="calculate()">=</button>
+            <button onclick="clearDisplay()" class="operator-btn">C</button>
+        </div>
+    </div>
+
+    <script>
+        
+// calculator website
+
+
+const display = document.getElementById("display");
+
+function buttonEachNumber(input) {
+
+    display.value += input
+        
+};
+
+function clearDisplay(){
+    display.value = "";
+    display.style.color = "white"
+};
+
+function calculate(){
+    try{
+        display.value = eval(display.value);
+    }
+
+    catch(error) {
+        display.value = "ERROR"
+
+        if(display.value = "ERROR"){
+            display.style.color = "red"
+        }
+        
+    }
+};
+
+
+
+    </script>
+</body>
+</html>
